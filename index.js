@@ -1,4 +1,3 @@
-require("dotenv").config();
 const options = {
 	method: 'GET',
 	headers: {

@@ -4,7 +4,7 @@ Weather App made using Rapid API
 ## Overview
 
 - Weather App is an online tool with which you can check out the weather of any city in the world. 
-- Weather API from [Rapid API](https://rapidapi.com/apininjas/api/weather-by-api-ninjas/) is used for fetching weather info.
+- Weather API from [API-Ninjas](https://rapidapi.com/apininjas/api/weather-by-api-ninjas/) from Rapid API is used for fetching weather info.
 
 <b>How to access this project ?</b>
 

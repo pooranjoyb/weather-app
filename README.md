@@ -12,11 +12,11 @@ Weather App made using Rapid API
  
  **Using Gitbash to clone**
 
-- Open Gitbash 
+- Open Gitbash/Terminal/Windows-Powershell
 
 - Copy the following command to clone this repository in your local storage:
 ```
-https://github.com/pooranjoyb/weather-app.git
+git clone https://github.com/pooranjoyb/weather-app.git
 ```
 - Hit the Enter key.
 

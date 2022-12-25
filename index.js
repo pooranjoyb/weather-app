@@ -12,13 +12,13 @@ const getWeather = (city) => {
         window.alert("Enter Valid City Name")
     } else {
         fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
-        .then(response => response.json())
-        .then(response => {
-            
-            if (response.temp === undefined) {
-                window.alert("Enter Valid City Name")
-            }
-            else {
+            .then(response => response.json())
+            .then(response => {
+
+                if (response.temp === undefined) {
+                    window.alert("Enter Valid City Name")
+                }
+                else {
                     cityName.innerHTML = city
                     cloud_pct.innerHTML = response.cloud_pct
                     temp.innerHTML = response.temp
@@ -41,3 +41,17 @@ submit.addEventListener("click", (e) => {
 })
 
 getWeather("Delhi")
+
+var cityData = [];
+
+fetch("https://places-api-q5mi.onrender.com/placesData").then(response => response.json()).then(response => {
+    response.forEach(data => {
+        cityData.push(data.name);
+    });
+})
+
+$(function () {
+    $("#city").autocomplete({
+        source: cityData
+    });
+});

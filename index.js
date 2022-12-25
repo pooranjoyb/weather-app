@@ -49,9 +49,13 @@ fetch("https://places-api-q5mi.onrender.com/placesData").then(response => respon
         cityData.push(data.name);
     });
 })
+.catch(err => console.log(err));
 
 $(function () {
     $("#city").autocomplete({
-        source: cityData
+        source: function(request, response) {
+            var results = $.ui.autocomplete.filter(cityData, request.term);
+            response(results.slice(0, 10));
+        }
     });
 });

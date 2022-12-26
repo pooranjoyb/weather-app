@@ -47,12 +47,21 @@ getWeather("Delhi")
 
 var cityData = [];
 
+function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+
 fetch("https://places-api-q5mi.onrender.com/placesData").then(response => response.json()).then(response => {
     response.forEach(data => {
         cityData.push(data.name);
     });
+    response.forEach(data => {
+        cityData.push(data.country)
+    })
+    cityData = removeDuplicates(cityData)
 })
 .catch(err => console.log(err));
+
 
 $(function () {
     $("#city").autocomplete({

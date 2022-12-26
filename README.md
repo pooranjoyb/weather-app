@@ -1,10 +1,12 @@
 # Weather-App
-Weather App made using Rapid API
+Weather App made using Rapid API and my own places-API
 
 ## Overview
 
 - Weather App is an online tool with which you can check out the weather of any city in the world. 
-- Weather API from [API-Ninjas](https://rapidapi.com/apininjas/api/weather-by-api-ninjas/) from Rapid API is used for fetching weather info.
+- Weather API by [API-Ninjas](https://rapidapi.com/apininjas/api/weather-by-api-ninjas/) from Rapid API is used for fetching weather info.
+- Used my own open-sourced [places-API](https://github.com/pooranjoyb/places-API) to fetch data for auto-complete search
+- [Jqwery Autocomplete](https://jqueryui.com/autocomplete/) is used that enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering
 
 <b>How to access this project ?</b>
 
@@ -25,6 +27,19 @@ Note: Please note that cloning depends on the internet connection and the time w
 
 - Check in the local drive by navigating to it manually.
 
-- Open the ***index.html*** file to view the project in the local environment.
+- Open the [index.html](index.html) file to view the project in the local environment.
 
-Contributions and Commits are apppreciated. 
+## Contribution
+
+Contributions and Commits are apppreciated. <br> 
+Add an **ISSUE** and create a **PULL REQUEST** to contribute 
+
+## Agreement
+
+This data is provided "as is" without warranty or any representation of accuracy, timeliness or completeness.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+

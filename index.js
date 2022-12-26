@@ -31,10 +31,13 @@ const getWeather = (city) => {
 
                 }
             })
-            .catch(err => console.error(err));
+            .catch(err => {
+                window.alert(err)
+                return;
+            });
+        }
     }
-}
-
+    
 submit.addEventListener("click", (e) => {
     e.preventDefault();
     getWeather(city.value);

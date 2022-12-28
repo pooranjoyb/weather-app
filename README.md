@@ -1,6 +1,8 @@
 # Weather-App
 Weather App made using Rapid API and my own places-API
 
+### Note: Backend for the website is in development
+
 ## Overview
 
 - Weather App is an online tool with which you can check out the weather of any city in the world. 

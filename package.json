@@ -1,15 +1,15 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "description": "Weather app using rapid api",
-  "main": "src/server.js",
+  "description": "Weather app using NodeJS",
+  "main": "backend/server.js",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pooranjoyb/weather-app.git"
   },
   "scripts": {
-    "start": "nodemon `src/server.js`"
+    "start": "nodemon `backend/server.js`"
   },
   "keywords": [
     "rapidapi"
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/pooranjoyb/weather-app#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "nodemon": "^2.0.20"
   }

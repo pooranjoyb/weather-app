@@ -11,7 +11,7 @@ app.use(express.static('./public'));
 
 app.use(express.json());
 
-app.get('/api', router);
+app.post('/api', router);
 
 app.listen(PORT, () => {
     console.log("App listening at port " + PORT)

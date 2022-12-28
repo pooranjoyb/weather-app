@@ -1,29 +1,15 @@
-const options = {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json'
-    }
-};
-
-const initiate = (x) => {
-    fetch('/api', options).then(response => (response.json())).then(data => {
-        fetchWeather(data, x);
-    });
-}
-
 const getWeather = (city) => {
     if (city === "") {
         window.alert("Enter Valid City Name")
     } else {
-       initiate(city);
-    }
-}
-
-const fetchWeather = (apiInfo, city) => {
-    fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, apiInfo)
-        .then(response => response.json())
-        .then(response => {
-
+       const options = {
+           method: 'POST',
+           headers: {
+               'Content-Type': 'application/json'
+           },
+           body: JSON.stringify({city})
+        };
+        fetch('/api', options).then(response => (response.json())).then(response => {
             if (response.temp === undefined) {
                 window.alert("Enter Valid City Name")
             }
@@ -39,13 +25,10 @@ const fetchWeather = (apiInfo, city) => {
                 sunset.innerHTML = new Date(response.sunset * 1000)
 
             }
-        })
-        .catch(err => {
-            window.alert(err)
-            return;
         });
-}
 
+    }
+}
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();

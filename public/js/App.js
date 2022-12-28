@@ -5,16 +5,17 @@ const options = {
     }
 };
 
-
-fetch('/api', options).then(response => (response.json())).then(data => {
-    fetchWeather(data, "Delhi");
-});
+const initiate = (x) => {
+    fetch('/api', options).then(response => (response.json())).then(data => {
+        fetchWeather(data, x);
+    });
+}
 
 const getWeather = (city) => {
     if (city === "") {
         window.alert("Enter Valid City Name")
     } else {
-       
+       initiate(city);
     }
 }
 

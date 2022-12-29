@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
-import router from './Routes/api.js'
+import cityApi from './Routes/cityApi.js'
+import placesApi from './Routes/placesApi.js';
 
 const app = express();
 
@@ -11,7 +12,9 @@ app.use(express.static('./public'));
 
 app.use(express.json());
 
-app.post('/api', router);
+
+app.post('/cityApi', cityApi);
+app.get('/placesApi', placesApi);
 
 app.listen(PORT, () => {
     console.log("App listening at port " + PORT)

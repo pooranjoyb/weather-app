@@ -2,14 +2,14 @@ const getWeather = (city) => {
     if (city === "") {
         window.alert("Enter Valid City Name")
     } else {
-       const options = {
+       const cityOptions = {
            method: 'POST',
            headers: {
                'Content-Type': 'application/json'
            },
            body: JSON.stringify({city})
         };
-        fetch('/api', options).then(response => (response.json())).then(response => {
+        fetch('/cityApi', cityOptions).then(response => (response.json())).then(response => {
             if (response.temp === undefined) {
                 window.alert("Enter Valid City Name")
             }
@@ -43,7 +43,13 @@ function removeDuplicates(arr) {
     return [...new Set(arr)];
 }
 
-fetch("https://places-api-q5mi.onrender.com/placesData").then(response => response.json()).then(response => {
+const placesOptions = {
+    method: 'GET',
+    headers:{
+        'Content-Type': 'application/json'
+    }
+}
+fetch('/placesApi', placesOptions).then(response => response.json()).then(response => {
     response.forEach(data => {
         cityData.push(data.name);
     });

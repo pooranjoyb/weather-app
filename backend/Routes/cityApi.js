@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from 'dotenv'
 import fetch from "node-fetch";
-const router = express.Router();
+const cityApi = express.Router();
 
 dotenv.config();
 const options = {
@@ -12,19 +12,19 @@ const options = {
     }
 };
 
-router.use(express.json())
-router.post('/api', (req, res) => {
+cityApi.use(express.json())
+cityApi.post('/cityApi', (req, res) => {
     console.log("Data requested for " + req.body.city)
-    fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + req.body.city, options)
+    fetch('https://' + process.env.API_HOST + '/v1/weather?city=' + req.body.city, options)
         .then(response => response.json())
         .then(response => {
             res.send(response);  
             console.log("Server responded with status 200")    
         })
         .catch(err => {
-            window.alert(err)
+            console.log(err)
             return;
         });
 })
 
-export default router;
+export default cityApi;

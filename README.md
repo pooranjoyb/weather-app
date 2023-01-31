@@ -24,6 +24,13 @@ It would take a few seconds to clone the repository onto your system.<br>
 - Check in the local drive by navigating to it manually.
 
 
+## Creating .env file
+
+Create a new file and name it .env in the root directory
+```
+API_KEY='<your-RapidAPI-Key>'
+API_HOST='weather-by-api-ninjas.p.rapidapi.com'
+```
 ## Dependencies
 
 - Express (v4.18.2)
@@ -37,6 +44,9 @@ Run the following commands to install the dependencies in the local directory an
     
     npm install
     npm start
+
+<b>
+
 
 ## Contribution
 

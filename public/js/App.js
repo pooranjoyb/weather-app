@@ -1,3 +1,9 @@
+// Preloader Animation
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function() {
+    loader.style.display = "none";
+})
+
 const getWeather = (city) => {
     if (city === "") {
         window.alert("Enter Valid City Name")
